@@ -3,7 +3,7 @@ import { analyzeArray } from '../js/analyzeArray';
 const testObj = analyzeArray([4, 7, 88, 99, 123]);
 
 test('should return an object', () => {
-  expect(typeof(testObj)).toBe('object');
+  expect(typeof testObj).toBe('object');
 });
 
 test('.average method should return an average', () => {
@@ -20,4 +20,13 @@ test('.max should return the highest value', () => {
 
 test('.length should return the array length', () => {
   expect(testObj.length).toEqual(5);
+});
+
+test('is formatted correctly', () => {
+  expect(testObj).toMatchObject({
+    average: 160.5,
+    min: 4,
+    max: 123,
+    length: 5,
+  });
 });
