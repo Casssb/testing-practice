@@ -2,7 +2,7 @@ import { Calculator } from '../js/calculator';
 
 const calc = Calculator();
 
-test('Expect return to be a number', () => {
+test('expect return to be a number', () => {
     expect(
       typeof calc.add(6,6)
     ).toBe('number');
